@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="刘宇杰的学术个人主页，展示教育背景、研究兴趣、项目经历与联系方式。">
+  <meta name="description" content="刘宇杰的个人主页，记录教育经历、荣誉奖励、竞赛成绩与学业表现。">
   <meta name="author" content="刘宇杰">
-  <meta name="theme-color" content="#f7f9fc">
+  <meta name="theme-color" content="#68EFF3">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="刘宇杰 | Academic Homepage">
-  <meta property="og:description" content="Education, research interests, projects and contact information.">
+  <meta property="og:title" content="刘宇杰 | Personal Homepage">
+  <meta property="og:description" content="Education, awards, competitions and academic performance.">
   <meta property="og:image" content="assets/profile.jpg">
-  <title>刘宇杰 | Academic Homepage</title>
+  <title>刘宇杰 | Personal Homepage</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -32,16 +32,16 @@
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="页面导航">
-        <a href="#about"><span class="lang-zh">关于</span><span class="lang-en">About</span></a>
+        <a href="#about"><span class="lang-zh">首页</span><span class="lang-en">Home</span></a>
         <a href="#education"><span class="lang-zh">教育</span><span class="lang-en">Education</span></a>
-        <a href="#interests"><span class="lang-zh">研究方向</span><span class="lang-en">Interests</span></a>
-        <a href="#experience"><span class="lang-zh">经历</span><span class="lang-en">Experience</span></a>
-        <a href="#skills"><span class="lang-zh">技能</span><span class="lang-en">Skills</span></a>
+        <a href="#honors"><span class="lang-zh">荣誉</span><span class="lang-en">Honors</span></a>
+        <a href="#competitions"><span class="lang-zh">竞赛</span><span class="lang-en">Competitions</span></a>
+        <a href="#academic"><span class="lang-zh">学业</span><span class="lang-en">Academic</span></a>
         <a href="#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
       </nav>
 
       <div class="header-actions">
-        <button class="text-button" id="language-toggle" type="button" aria-label="Switch to English">
+        <button class="text-button" id="language-toggle" type="button" aria-label="切换为英文">
           <span class="lang-zh">EN</span><span class="lang-en">中文</span>
         </button>
         <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深色模式">
@@ -55,169 +55,145 @@
   <main class="page-shell" id="main-content">
     <aside class="profile-card" aria-label="个人资料">
       <div class="portrait-wrap">
-        <img class="portrait" src="assets/profile.jpg" alt="刘宇杰的个人照片" width="1120" height="1680">
+        <img class="portrait" src="assets/profile.jpg" alt="刘宇杰的个人照片" width="1120" height="1680" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+        <div class="portrait-fallback" hidden aria-hidden="true">LYJ</div>
       </div>
+
       <div class="profile-heading">
-        <p class="eyebrow"><span class="lang-zh">个人主页</span><span class="lang-en">Academic Profile</span></p>
+        <p class="eyebrow"><span class="lang-zh">个人主页</span><span class="lang-en">Personal Profile</span></p>
         <h1><span class="lang-zh">刘宇杰</span><span class="lang-en">Yujie Liu</span></h1>
         <p class="profile-role">
-          <span class="lang-zh">本科生 · 潜在研究者</span>
-          <span class="lang-en">Undergraduate · Aspiring Researcher</span>
+          <span class="lang-zh">本科生</span>
+          <span class="lang-en">Undergraduate Student</span>
         </p>
-        <p class="profile-org draft-copy">
-          <span class="lang-zh">所在大学 · 专业待补充</span>
-          <span class="lang-en">University · Major to be added</span>
+        <p class="profile-org">
+          <span class="lang-zh">山东大学 · 专业待补充</span>
+          <span class="lang-en">Shandong University · Major to be added</span>
         </p>
       </div>
 
       <div class="availability">
         <span class="status-dot" aria-hidden="true"></span>
-        <span class="lang-zh">正在准备港新硕博申请</span>
-        <span class="lang-en">Preparing for postgraduate applications</span>
+        <span class="lang-zh">本科阶段经历持续整理中</span>
+        <span class="lang-en">Updating undergraduate achievements</span>
       </div>
 
       <div class="profile-links">
-        <span class="profile-link draft-copy">
+        <span class="profile-link muted-link">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
           <span class="lang-zh">邮箱待补充</span><span class="lang-en">Email to be added</span>
         </span>
-        <span class="profile-link draft-copy">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.4 13.4 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          <span class="lang-zh">GitHub 待补充</span><span class="lang-en">GitHub to be added</span>
-        </span>
-        <span class="profile-link draft-copy">
+        <span class="profile-link muted-link">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>
-          <span class="lang-zh">英文简历待上传</span><span class="lang-en">CV to be uploaded</span>
+          <span class="lang-zh">简历待补充</span><span class="lang-en">CV to be added</span>
         </span>
       </div>
-
-      <p class="profile-note">
-        <span class="lang-zh">页面中的浅色虚线内容均为待替换项。</span>
-        <span class="lang-en">Dashed items are placeholders to replace.</span>
-      </p>
     </aside>
 
     <div class="content-column">
       <section class="hero section" id="about">
-        <p class="section-kicker"><span class="lang-zh">关于我</span><span class="lang-en">About Me</span></p>
+        <p class="section-kicker"><span class="lang-zh">个人简介</span><span class="lang-en">Profile</span></p>
         <h2 class="hero-title">
-          <span class="lang-zh">保持好奇，认真研究<br><em>值得回答的问题。</em></span>
-          <span class="lang-en">Stay curious and study<br><em>questions worth answering.</em></span>
+          <span class="lang-zh">把正在做的事，<br><em>清楚地记录下来。</em></span>
+          <span class="lang-en">Keeping a clear record of<br><em>what I am working on.</em></span>
         </h2>
         <div class="hero-copy">
-          <p class="lang-zh">你好，我是刘宇杰，目前处于本科阶段，正在为香港与新加坡的硕博申请做准备。我希望通过持续的项目实践、学术训练与开放交流，逐步建立扎实的研究能力。</p>
-          <p class="lang-en">Hello, I am Yujie Liu, an undergraduate preparing for postgraduate study in Hong Kong and Singapore. Through project-based practice, academic training, and open collaboration, I aim to build a solid foundation for research.</p>
-          <p class="draft-copy lang-zh">请在这里补充你的专业背景、具体研究兴趣，以及一两句能够代表你的学术目标。</p>
-          <p class="draft-copy lang-en">Add your academic background, specific research interests, and one or two sentences about your long-term goals here.</p>
+          <p class="lang-zh">你好，我是刘宇杰，目前就读于山东大学。本页主要记录本科阶段的学习成绩、获得的荣誉以及参加过的体育竞赛。</p>
+          <p class="lang-en">Hello, I am Yujie Liu, an undergraduate student at Shandong University. This page records my academic performance, honors, and athletic competition results.</p>
+          <p class="muted-copy lang-zh">专业方向、研究兴趣和联系方式会在确定后补充。</p>
+          <p class="muted-copy lang-en">My major, research interests, and contact details will be added later.</p>
         </div>
-        <div class="tag-list" aria-label="当前重点">
-          <span>Research Preparation</span>
-          <span>Academic Writing</span>
-          <span>LaTeX</span>
-          <span>Hong Kong &amp; Singapore</span>
+        <div class="tag-list" aria-label="页面内容">
+          <span>Academic Performance</span>
+          <span>National Scholarship</span>
+          <span>Merit Student</span>
+          <span>Athletics</span>
         </div>
       </section>
 
       <section class="section" id="education">
         <div class="section-heading">
           <div><p class="section-kicker">01</p><h2><span class="lang-zh">教育背景</span><span class="lang-en">Education</span></h2></div>
-          <p><span class="lang-zh">学习经历</span><span class="lang-en">Academic journey</span></p>
+          <p><span class="lang-zh">本科阶段</span><span class="lang-en">Undergraduate study</span></p>
         </div>
-        <article class="timeline-item draft-panel">
+        <article class="timeline-item">
           <div class="timeline-marker" aria-hidden="true"></div>
           <div class="timeline-content">
             <div class="item-topline">
-              <h3><span class="lang-zh">所在大学（待补充）</span><span class="lang-en">University Name (to be added)</span></h3>
-              <time><span class="lang-zh">入学年份 — 至今</span><span class="lang-en">Start year — Present</span></time>
+              <h3><span class="lang-zh">山东大学</span><span class="lang-en">Shandong University</span></h3>
+              <time><span class="lang-zh">2023 — 至今</span><span class="lang-en">2023 — Present</span></time>
             </div>
-            <p class="item-subtitle"><span class="lang-zh">本科 · 专业名称待补充</span><span class="lang-en">Bachelor's Degree · Major to be added</span></p>
-            <p><span class="lang-zh">可在此填写 GPA、专业排名、核心课程、奖学金或交换经历。优先保留能够体现学术能力的内容。</span><span class="lang-en">Add your GPA, ranking, key coursework, scholarships, or exchange experience. Prioritize evidence of academic ability.</span></p>
+            <p class="item-subtitle"><span class="lang-zh">本科生 · 专业待补充</span><span class="lang-en">Undergraduate Student · Major to be added</span></p>
+            <p><span class="lang-zh">目前正在完成本科阶段学习，已积累学业、荣誉和体育竞赛方面的阶段性成果。</span><span class="lang-en">Currently completing undergraduate study, with achievements in academics, honors, and athletics.</span></p>
           </div>
         </article>
       </section>
 
-      <section class="section" id="interests">
+      <section class="section" id="honors">
         <div class="section-heading">
-          <div><p class="section-kicker">02</p><h2><span class="lang-zh">研究兴趣</span><span class="lang-en">Research Interests</span></h2></div>
-          <p><span class="lang-zh">探索中的方向</span><span class="lang-en">Themes in exploration</span></p>
+          <div><p class="section-kicker">02</p><h2><span class="lang-zh">荣誉与奖励</span><span class="lang-en">Honors &amp; Awards</span></h2></div>
+          <p><span class="lang-zh">已获得</span><span class="lang-en">Recognition</span></p>
         </div>
-        <div class="interest-grid">
-          <article class="interest-card draft-panel">
-            <span class="card-index">01</span>
-            <h3><span class="lang-zh">研究方向一</span><span class="lang-en">Research Area One</span></h3>
-            <p><span class="lang-zh">用 1–2 句话说明你关注的研究问题，以及为什么对它感兴趣。</span><span class="lang-en">Describe a research question you care about and why it matters to you.</span></p>
+        <div class="record-grid">
+          <article class="record-card record-card-featured">
+            <span class="record-label"><span class="lang-zh">国家级荣誉</span><span class="lang-en">National Award</span></span>
+            <h3><span class="lang-zh">本科生国家奖学金</span><span class="lang-en">National Scholarship</span></h3>
+            <p><span class="lang-zh">2023—2024 学年</span><span class="lang-en">2023–2024 Academic Year</span></p>
           </article>
-          <article class="interest-card draft-panel">
-            <span class="card-index">02</span>
-            <h3><span class="lang-zh">研究方向二</span><span class="lang-en">Research Area Two</span></h3>
-            <p><span class="lang-zh">可以写与你目标导师高度匹配的细分方向、方法或应用场景。</span><span class="lang-en">Add a focused topic, method, or application aligned with prospective supervisors.</span></p>
+          <article class="record-card">
+            <span class="record-label"><span class="lang-zh">校级荣誉</span><span class="lang-en">University Honor</span></span>
+            <h3><span class="lang-zh">山东大学三好学生</span><span class="lang-en">Merit Student of Shandong University</span></h3>
+            <p><span class="lang-zh">2023—2024 学年</span><span class="lang-en">2023–2024 Academic Year</span></p>
           </article>
-          <article class="interest-card draft-panel">
-            <span class="card-index">03</span>
-            <h3><span class="lang-zh">交叉研究方向</span><span class="lang-en">Interdisciplinary Theme</span></h3>
-            <p><span class="lang-zh">展示你希望连接的两个领域，以及你能够带来的独特视角。</span><span class="lang-en">Show how you hope to connect two fields and the perspective you can contribute.</span></p>
+          <article class="record-card">
+            <span class="record-label"><span class="lang-zh">校级荣誉</span><span class="lang-en">University Honor</span></span>
+            <h3><span class="lang-zh">山东大学三好学生</span><span class="lang-en">Merit Student of Shandong University</span></h3>
+            <p><span class="lang-zh">2024—2025 学年</span><span class="lang-en">2024–2025 Academic Year</span></p>
           </article>
         </div>
       </section>
 
-      <section class="section" id="experience">
+      <section class="section" id="competitions">
         <div class="section-heading">
-          <div><p class="section-kicker">03</p><h2><span class="lang-zh">科研与项目</span><span class="lang-en">Research &amp; Projects</span></h2></div>
-          <p><span class="lang-zh">持续更新</span><span class="lang-en">Work in progress</span></p>
+          <div><p class="section-kicker">03</p><h2><span class="lang-zh">竞赛成绩</span><span class="lang-en">Competition Results</span></h2></div>
+          <p><span class="lang-zh">体育竞赛</span><span class="lang-en">Athletics</span></p>
         </div>
-        <div class="project-list">
-          <article class="project-card draft-panel">
-            <div class="project-meta"><span><span class="lang-zh">科研项目</span><span class="lang-en">Research Project</span></span><time><span class="lang-zh">年份</span><span class="lang-en">Year</span></time></div>
-            <h3><span class="lang-zh">项目名称待补充</span><span class="lang-en">Project title to be added</span></h3>
-            <p><span class="lang-zh">建议采用“研究问题—你的方法—你的贡献—阶段性结果”的顺序，用三到四行说明项目。即使成果尚未发表，也可展示可靠的研究过程。</span><span class="lang-en">Use a question–method–contribution–result structure. A rigorous process is worth showing even before publication.</span></p>
-            <div class="project-tags"><span>Method</span><span>Tool</span><span>Topic</span></div>
+        <div class="competition-list">
+          <article class="competition-item">
+            <span class="competition-number">01</span>
+            <div><h3><span class="lang-zh">1500 米项目年级第二名</span><span class="lang-en">Second Place in the 1500 m Event</span></h3><p><span class="lang-zh">山东大学第三十六届田径运动会</span><span class="lang-en">The 36th Shandong University Track and Field Meet</span></p></div>
           </article>
-          <article class="project-card draft-panel">
-            <div class="project-meta"><span><span class="lang-zh">课程 / 独立项目</span><span class="lang-en">Course / Independent Project</span></span><time><span class="lang-zh">年份</span><span class="lang-en">Year</span></time></div>
-            <h3><span class="lang-zh">项目名称待补充</span><span class="lang-en">Project title to be added</span></h3>
-            <p><span class="lang-zh">没有正式科研经历时，可先展示数学建模、课程论文、数据分析或开源项目，并附上代码、报告或演示链接。</span><span class="lang-en">Before formal research experience, feature modeling, course papers, data analysis, or open-source work with links to code and reports.</span></p>
-            <div class="project-tags"><span>GitHub</span><span>Report</span><span>Analysis</span></div>
+          <article class="competition-item">
+            <span class="competition-number">02</span>
+            <div><h3><span class="lang-zh">男子团体第一名</span><span class="lang-en">First Place, Men's Team</span></h3><p><span class="lang-zh">越野赛</span><span class="lang-en">Cross-country race</span></p></div>
           </article>
         </div>
       </section>
 
-      <section class="section" id="skills">
+      <section class="section" id="academic">
         <div class="section-heading">
-          <div><p class="section-kicker">04</p><h2><span class="lang-zh">技能与当前重点</span><span class="lang-en">Skills &amp; Current Focus</span></h2></div>
-          <p><span class="lang-zh">工具与能力</span><span class="lang-en">Tools and capabilities</span></p>
+          <div><p class="section-kicker">04</p><h2><span class="lang-zh">学业表现</span><span class="lang-en">Academic Performance</span></h2></div>
+          <p><span class="lang-zh">成绩记录</span><span class="lang-en">Academic record</span></p>
         </div>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3><span class="lang-zh">学术工具</span><span class="lang-en">Academic Tools</span></h3>
-            <ul><li>LaTeX / Overleaf <span class="progress-label"><span class="lang-zh">学习中</span><span class="lang-en">Learning</span></span></li><li class="draft-copy"><span class="lang-zh">其他软件待补充</span><span class="lang-en">Other software</span></li></ul>
-          </div>
-          <div class="skill-group">
-            <h3><span class="lang-zh">研究能力</span><span class="lang-en">Research</span></h3>
-            <ul><li><span class="lang-zh">学术写作</span><span class="lang-en">Academic Writing</span> <span class="progress-label"><span class="lang-zh">提升中</span><span class="lang-en">Developing</span></span></li><li class="draft-copy"><span class="lang-zh">研究方法待补充</span><span class="lang-en">Research methods</span></li></ul>
-          </div>
-          <div class="skill-group">
-            <h3><span class="lang-zh">语言</span><span class="lang-en">Languages</span></h3>
-            <ul><li><span class="lang-zh">中文 · 母语</span><span class="lang-en">Chinese · Native</span></li><li><span class="lang-zh">英语 · 备考中</span><span class="lang-en">English · In preparation</span></li></ul>
-          </div>
+        <div class="score-card">
+          <div class="score-value">92.41</div>
+          <div class="score-copy"><span class="score-unit">/ 100</span><h3><span class="lang-zh">百分制绩点</span><span class="lang-en">Score on a 100-point scale</span></h3><p><span class="lang-zh">当前已记录的学业成绩</span><span class="lang-en">Current academic record</span></p></div>
         </div>
       </section>
 
       <section class="contact-section" id="contact">
         <div>
-          <p class="section-kicker"><span class="lang-zh">保持联系</span><span class="lang-en">Get in Touch</span></p>
-          <h2><span class="lang-zh">期待有价值的交流与合作。</span><span class="lang-en">Open to meaningful conversations and collaboration.</span></h2>
-          <p><span class="lang-zh">欢迎就研究项目、学术交流或潜在机会与我联系。</span><span class="lang-en">Feel free to reach out about research, academic exchange, or potential opportunities.</span></p>
+          <p class="section-kicker"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></p>
+          <h2><span class="lang-zh">联系方式将在确定后更新。</span><span class="lang-en">Contact details will be added later.</span></h2>
+          <p><span class="lang-zh">目前页面先展示已确认的教育、荣誉、竞赛和学业信息。</span><span class="lang-en">For now, this page includes confirmed education, honors, competition, and academic information.</span></p>
         </div>
-        <span class="contact-button is-placeholder" aria-disabled="true">
-          <span class="lang-zh">填写邮箱后启用</span><span class="lang-en">Add email to enable</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-        </span>
+        <span class="contact-button is-placeholder" aria-disabled="true"><span class="lang-zh">邮箱待补充</span><span class="lang-en">Email to be added</span><span aria-hidden="true">→</span></span>
       </section>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div><span>© <span id="year">2026</span> </span><span class="lang-zh">刘宇杰</span><span class="lang-en">Yujie Liu</span></div>
+    <div>© <span id="year">2026</span> <span class="lang-zh">刘宇杰</span><span class="lang-en">Yujie Liu</span></div>
     <a href="#top"><span class="lang-zh">返回顶部 ↑</span><span class="lang-en">Back to top ↑</span></a>
   </footer>
 </body>
