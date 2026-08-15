@@ -5,9 +5,12 @@
   const menuButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
   const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const brandLink = document.querySelector('.brand');
+  const profileCard = document.querySelector('.profile-card');
+  const portrait = document.querySelector('.portrait');
 
   const storedLanguage = localStorage.getItem('homepage-language');
-  const initialLanguage = storedLanguage === 'en' ? 'en' : 'zh';
+  const initialLanguage = storedLanguage === 'zh' ? 'zh' : 'en';
   root.dataset.language = initialLanguage;
   root.lang = initialLanguage === 'en' ? 'en' : 'zh-CN';
 
@@ -18,7 +21,10 @@
 
   function syncThemeUI() {
     const dark = root.dataset.theme === 'dark';
-    themeButton.setAttribute('aria-label', dark ? '切换浅色模式' : '切换深色模式');
+    const english = root.dataset.language === 'en';
+    themeButton.setAttribute('aria-label', english
+      ? (dark ? 'Switch to light mode' : 'Switch to dark mode')
+      : (dark ? '切换浅色模式' : '切换深色模式'));
     themeMeta.setAttribute('content', dark ? '#0e1622' : '#f7f9fc');
   }
 
@@ -26,6 +32,10 @@
     const english = root.dataset.language === 'en';
     languageButton.setAttribute('aria-label', english ? '切换为中文' : 'Switch to English');
     menuButton.setAttribute('aria-label', english ? 'Open navigation menu' : '打开导航菜单');
+    nav.setAttribute('aria-label', english ? 'Primary navigation' : '页面导航');
+    brandLink.setAttribute('aria-label', english ? "Yujie Liu's homepage" : '刘宇杰的主页');
+    profileCard.setAttribute('aria-label', english ? 'Profile of Yujie Liu' : '刘宇杰的个人资料');
+    portrait.setAttribute('alt', english ? 'Portrait of Yujie Liu' : '刘宇杰的个人照片');
     document.title = english ? 'Yujie “Jie” Liu | Academic Homepage' : '刘宇杰（Jie）| Academic Homepage';
   }
 
@@ -35,6 +45,7 @@
     root.lang = next === 'en' ? 'en' : 'zh-CN';
     localStorage.setItem('homepage-language', next);
     syncLanguageUI();
+    syncThemeUI();
   });
 
   themeButton.addEventListener('click', () => {
