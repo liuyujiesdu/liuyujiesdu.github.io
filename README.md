@@ -7,10 +7,10 @@
 在本文件夹打开 PowerShell，运行：
 
 ```powershell
-py -m http.server 8000
+py -m http.server 8000 --bind 127.0.0.1
 ```
 
-然后访问 <http://localhost:8000>。按 `Ctrl + C` 停止服务。
+然后访问 <http://127.0.0.1:8000>。按 `Ctrl + C` 停止服务。
 
 ## 发布到 GitHub Pages
 
@@ -20,21 +20,18 @@ py -m http.server 8000
 4. 在 **Build and deployment** 中选择 **Deploy from a branch**，分支选择 `main`，目录选择 `/ (root)`，然后保存。
 5. 等待几分钟后访问 GitHub 显示的网址。
 
-## 发布前要替换的内容
+## 当前页面内容
 
-打开 `index.html`，搜索“待补充”“待添加”“待上传”或英文 `to be added`，即可快速找到所有占位项。建议优先补充：
+页面已经录入中英文个人简介、山东大学教育经历、成绩与排名、研究兴趣、科研立项、荣誉奖项、田径成绩、学生工作和联系邮箱。
 
-- 学校、专业、入学时间、GPA 与排名；
-- 具体研究方向和个人简介；
-- 邮箱、GitHub 链接与英文 CV；
-- 科研、竞赛、课程项目及其代码或报告链接；
-- 已经掌握的软件、研究方法和英语成绩。
+后续获得更多资料后，可继续在 `index.html` 中补充：
 
-如需启用邮箱按钮，将 `index.html` 中的 `span.contact-button` 改为：
+- 科研项目的正式名称、时间、指导教师和成果链接；
+- GitHub、Google Scholar、ORCID 和英文 CV；
+- 课程、软件技能、英语成绩及论文或报告；
+- 奖项证书、项目图片和公开代码链接。
 
-```html
-<a class="contact-button" href="mailto:你的邮箱地址">发送邮件</a>
-```
+联系按钮已经连接到 `202300810066@mail.sdu.edu.cn`。
 
 ## Google 收录
 

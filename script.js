@@ -1,38 +1,79 @@
-const body = document.body;
-const languageToggle = document.querySelector('#language-toggle');
-const themeToggle = document.querySelector('#theme-toggle');
-const menuToggle = document.querySelector('.menu-toggle');
-const siteNav = document.querySelector('#site-nav');
+(() => {
+  const root = document.documentElement;
+  const languageButton = document.querySelector('#language-toggle');
+  const themeButton = document.querySelector('#theme-toggle');
+  const menuButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#site-nav');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
 
-const savedLanguage = localStorage.getItem('profile-language');
-const savedTheme = localStorage.getItem('profile-theme');
+  const storedLanguage = localStorage.getItem('homepage-language');
+  const initialLanguage = storedLanguage === 'en' ? 'en' : 'zh';
+  root.dataset.language = initialLanguage;
+  root.lang = initialLanguage === 'en' ? 'en' : 'zh-CN';
 
-if (savedLanguage === 'en') body.classList.add('is-en');
-if (savedTheme === 'dark') body.classList.add('dark');
+  const storedTheme = localStorage.getItem('homepage-theme');
+  const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const initialTheme = storedTheme || preferredTheme;
+  root.dataset.theme = initialTheme;
 
-languageToggle?.addEventListener('click', () => {
-  const isEnglish = body.classList.toggle('is-en');
-  localStorage.setItem('profile-language', isEnglish ? 'en' : 'zh');
-  languageToggle.setAttribute('aria-label', isEnglish ? 'Switch to Chinese' : '切换为英文');
-});
+  function syncThemeUI() {
+    const dark = root.dataset.theme === 'dark';
+    themeButton.setAttribute('aria-label', dark ? '切换浅色模式' : '切换深色模式');
+    themeMeta.setAttribute('content', dark ? '#0e1622' : '#f7f9fc');
+  }
 
-themeToggle?.addEventListener('click', () => {
-  const isDark = body.classList.toggle('dark');
-  localStorage.setItem('profile-theme', isDark ? 'dark' : 'light');
-  themeToggle.setAttribute('aria-label', isDark ? '切换浅色模式' : '切换深色模式');
-});
+  function syncLanguageUI() {
+    const english = root.dataset.language === 'en';
+    languageButton.setAttribute('aria-label', english ? '切换为中文' : 'Switch to English');
+    menuButton.setAttribute('aria-label', english ? 'Open navigation menu' : '打开导航菜单');
+    document.title = english ? 'Yujie “Jie” Liu | Academic Homepage' : '刘宇杰（Jie）| Academic Homepage';
+  }
 
-menuToggle?.addEventListener('click', () => {
-  const isOpen = siteNav.classList.toggle('is-open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-});
-
-siteNav?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    siteNav.classList.remove('is-open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
+  languageButton.addEventListener('click', () => {
+    const next = root.dataset.language === 'zh' ? 'en' : 'zh';
+    root.dataset.language = next;
+    root.lang = next === 'en' ? 'en' : 'zh-CN';
+    localStorage.setItem('homepage-language', next);
+    syncLanguageUI();
   });
-});
 
-const year = document.querySelector('#year');
-if (year) year.textContent = new Date().getFullYear();
+  themeButton.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('homepage-theme', next);
+    syncThemeUI();
+  });
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
+    nav.classList.toggle('open', !isOpen);
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const navLinks = [...nav.querySelectorAll('a')];
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    navLinks.forEach((link) => {
+      const active = link.getAttribute('href') === `#${visible.target.id}`;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.2, 0.5] });
+
+  sections.forEach((section) => observer.observe(section));
+  document.querySelector('#year').textContent = new Date().getFullYear();
+  syncThemeUI();
+  syncLanguageUI();
+})();
